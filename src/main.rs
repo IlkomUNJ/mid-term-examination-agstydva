@@ -12,6 +12,8 @@ fn main() {
     //turn on to test the old code
     // test_binary_tree();
     test_binary_search_tree();
+    
+    
 }
 
 fn test_binary_search_tree(){
@@ -104,7 +106,7 @@ fn test_binary_search_tree(){
             print!("successor of node ({}) is ", key);
 
             if let Some(successor) = BstNode::tree_successor_simpler(&node) {
-                println!("{:?}", successor.borrow().key);
+                println!("{:#?}", successor.borrow().key);
             } else {
                 println!("not found");
             }
@@ -125,6 +127,16 @@ fn test_binary_search_tree(){
         let rootalter = BstNode::tree_delete(&rootlink2.as_ref().unwrap());
         generate_dotfile_bst(&rootalter, "bst_delete_root.dot");
     }
+
+
+
+    // Tambahan Alamak Ciks untuk median dan tree_rebalance
+    let median_node = rootlink.borrow().median();
+    generate_dotfile_bst(&median_node, "median.dot");
+
+    let rebalance_node = BstNode::tree_rebalance(&rootlink);
+    generate_dotfile_bst(&rebalance_node, "rebalance.dot");
+
 }
 
 fn test_index(){

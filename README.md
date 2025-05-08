@@ -5,7 +5,10 @@ This repo contain the complete source code of binary search tree implementation.
 
 Name: Agastya Dava Nurrahman
 
+
 NIM : 1313623052
+
+Prodi : Ilmu Komputer 2023
 
 
 Put on the above field, your identity. 
